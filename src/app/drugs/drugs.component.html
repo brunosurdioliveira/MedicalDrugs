@@ -1,0 +1,45 @@
+<div id="main-content">
+  <div class="container carousel-drugs">
+    <div class="row row-cols-1 row-cols-md-4">
+      <carousel [cellsToShow]="4" [arrowsOutside]="true" arrowsTheme="dark" [height]="300">
+        <div *ngFor="let drug of drugs; let i = index" class="col mb-4 carousel-cell">
+          <div class="card">
+            <div class="card-header">
+              Generic Name: {{drug.genericName}}
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Brand Name: {{drug.brandName}}</li>
+              <li class="list-group-item">Strength: {{drug.strength}}</li>
+              <li class="list-group-item">Dosage form: {{drug.dosageForm}}</li>
+            </ul>
+          </div>
+        </div>
+      </carousel>
+    </div>
+  </div>
+  <div class="container">
+    <h2 class="alert alert-light">Table view</h2>
+    <table class="table table-hover">
+      <thead class="thead-dark">
+      <th scope="col">#</th>
+      <th scope="col">Generic Name</th>
+      <th scope="col">Brand Name</th>
+      <th scope="col">Strength</th>
+      <th scope="col">Dosage Form</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let drug of drugs; let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <td>{{drug.genericName}}</td>
+        <td>{{drug.brandName}}</td>
+        <td>{{drug.strength}}</td>
+        <td>{{drug.dosageForm}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<footer class="py-4 bg-dark">
+  <div class="container"><p class="m-0 text-center text-white">Copyright © London Medical Pharmacy 2021</p></div>
+</footer>
+

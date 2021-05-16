@@ -1,0 +1,28 @@
+.carousel-drugs {
+    margin-top: 3%;
+  }
+
+#main-content {
+  position: relative;
+}
+
+footer {
+  position: inherit;
+}
+
+h2 {
+  text-align: center;
+}
+
+.table {
+  margin-bottom: 50px;
+  table-layout:fixed;
+}
+
+td{
+  word-wrap:break-word;
+}
+
+carousel {
+  height: auto;
+}

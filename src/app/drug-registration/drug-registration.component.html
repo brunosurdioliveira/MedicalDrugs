@@ -1,0 +1,28 @@
+<div class="container"><br><br>
+  <h2 class="alert alert-light">Register a new drug</h2><br>
+  <form [formGroup]="drugForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label">Generic Name</label>
+      <input type="text" formControlName="genericName" class="form-control" placeholder="Name">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Brand Name</label>
+      <input type="text" formControlName="brandName" class="form-control" placeholder="Brand">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Strength</label>
+      <input type="text" formControlName="strength" class="form-control" placeholder="Strength">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Dosage form</label>
+      <input type="text" formControlName="dosageForm" class="form-control" placeholder="Dosage Form">
+    </div>
+    <button type="submit" (click)="onSubmit()" [disabled]="!drugForm.valid" class="btn btn-success" routerLink="/drugs" routerLinkActive="active">Add
+      to the repository</button>
+  </form>
+</div><br><br>
+<footer class="py-5 bg-dark">
+  <div class="container"><p class="m-0 text-center text-white">Copyright © London Medical Pharmacy 2021</p></div>
+</footer>
+
+

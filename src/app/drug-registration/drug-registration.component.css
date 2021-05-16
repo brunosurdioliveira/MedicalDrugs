@@ -1,0 +1,17 @@
+.container {
+    text-align-last: center;
+}
+
+.form-control {
+    width: 50%;
+}
+
+.mb-3 {
+    text-align: -webkit-center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    /*width: 100%;*/
+}
